@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
+/*
+#4B6584; //Cor para background
+#2C3A47; //Cor para texto
+#B2BEC3; //Cor para texto2
+
+Utilização da variável:
+
+background: var(--preta);
+
+
+Para criar um fundo com um gradiente:
+
+.classe-da-div-do-fundo {
+    background: linear-gradient(130deg, #B2BEC3, #4B6584);
+    background-size: 200% 200%;
+    animation: animated-gradient 2s linear infinite;
+}
+
+@keyframes animated-gradient {
+    25% {
+        background-position: left bottom;
+    }
+    50% {
+        background-position: right bottom;
+    }
+    75% {
+        background-position: right top;
+    }
+    100% {
+        background-position: left top;
+    }
+}
+
+*/
+
+
+/*Variáveis*/
+
+:root {
+    /*Tamanhos*/
+    --nav-width: 92px;
+    /*Cores*/
+    --fundo: #2C3A47;
+    --cor-1: #B2BEC3;
+    --cor-2: #4B6584;
+    --cor-3: #E7E2E2;
+    /*Fontes*/
+    --body-font: 'Reggae One', sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    /*Z Index*/
+    --z-index: 100;
+}
+
+
+/*Body*/
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 2rem 0 0 6.75rem;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: .5s;
+    background-color: var(--fundo);
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*Menu Lateral*/
+
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    height: 100vh;
+    background-color: var(--cor-2);
+    color: var(--fundo);
+    padding: 1.5rem 1.5rem 2rem;
+    transition: .5s;
+    z-index: var(--z-fixed);
+}
+
+
+/*Navbar*/
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav__brand {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.nav__toggle {
+    font-size: 1.25rem;
+    padding: .85rem;
+    cursor: pointer;
+}
+
+.nav__logo {
+    color: var(--fundo);
+    font-weight: 600;
+}
+
+.nav__link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: .90rem;
+    padding: .75rem;
+    color: var(--fundo);
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nav__link:hover {
+    background-color: var(--cor-1);
+}
+
+.nav__icon {
+    font-size: 1.25rem;
+}
+
+.nav__name {
+    font-size: var(--small-font-size);
+}
+
+
+/* Expansão do Menu */
+
+.expander {
+    width: calc(var(--nav-width) + 9.25rem);
+}
+
+
+/*Adicionando Padding ao Body*/
+
+.body-pd {
+    padding: 2rem 0 0 16rem;
+}
+
+
+/* Links Ativos no Menu*/
+
+.active {
+    background-color: var(--cor-1);
+}
+
+
+/*Menu Drop*/
+
+.collapse {
+    grid-template-columns: 20px max-content 1fr;
+}
+
+.collapse__link {
+    justify-self: flex-end;
+    transition: .5s;
+}
+
+.collapse__menu {
+    display: none;
+    padding: .75rem 2.25rem;
+}
+
+.collapse__sublink {
+    color: var(--cor-3);
+    font-size: var(--small-font-size);
+    align-items: center;
+    column-gap: .50rem;
+    padding: .25rem;
+    border-radius: .5rem;
+    transition: .3s;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.collapse__icon {
+    font-size: .80rem;
+    color: var(--fundo);
+}
+
+.collapse__sublink:hover {
+    color: var(--fundo) !important;
+    background-color: var(--cor-3);
+    width: 120px;
+}
+
+
+/*Exibir Menu Drop*/
+
+.showCollapse {
+    display: block;
+}
+
+
+/*Girar icone do Menu Drop*/
+
+.rotate {
+    transform: rotate(180deg);
+    transition: .5s;
+}

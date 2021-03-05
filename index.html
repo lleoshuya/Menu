@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Menu Lateral</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/css.css">
+
+</head>
+
+<body id="body-pd">
+
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <div class="nav__brand">
+                    <i class="fas fa-bars nav__toggle" id="nav-toggle"></i>
+                    <a href="#" class="nav__logo">lLeoShuya</a>
+                </div>
+                <div class="nav-list">
+                    <a href="#" class="nav__link">
+                        <i class="fas fa-home nav__icon"></i>
+                        <span class="nav__name">Página Inicial</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class="fas fa-tasks nav__icon"></i>
+                        <span class="nav__name">Tarefas</span>
+                    </a>
+
+                    <div class="nav__link collapse">
+                        <i class="fas fa-users-cog nav__icon"></i>
+                        <span class="nav__name">Gerenciamento</span>
+
+                        <i class="fas fa-chevron-circle-down collapse__link"></i>
+
+                        <ul class="collapse__menu">
+
+                            <a href="#" class="collapse__sublink">
+                                <i class="fas fa-user-plus collapse__icon"></i>
+                                <span class="nav__name">Adicionar</span>
+                            </a>
+                            <a href="#" class="collapse__sublink">
+                                <i class="fas fa-user-edit collapse__icon"></i>
+                                <span class="nav__name">Editar</span>
+                            </a>
+                            <a href="#" class="collapse__sublink">
+                                <i class="fas fa-user-cog collapse__icon"></i>
+                                <span class="nav__name">Configurar</span>
+                            </a>
+                            <a href="#" class="collapse__sublink">
+                                <i class="fas fa-user-check collapse__icon"></i>
+                                <span class="nav__name">Validar</span>
+                            </a>
+                        </ul>
+
+                    </div>
+
+                    <a href="#" class="nav__link">
+                        <i class="fas fa-sticky-note nav__icon"></i>
+                        <span class="nav__name">Anotações</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class="fas fa-book-open nav__icon"></i>
+                        <span class="nav__name">Consultar Anotações</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class="fas fa-cog nav__icon"></i>
+                        <span class="nav__name">Configurações</span>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="nav__link">
+                <i class="fas fa-sign-out-alt nav__icon"></i>
+                <span class="nav__name">Sair</span>
+            </a>
+        </nav>
+    </div>
+
+    <h1>Componentes</h1>
+
+    <!--JavaScript-->
+    <script src="js/js.js"></script>
+    <script src="https://kit.fontawesome.com/4e5c1e73c7.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
