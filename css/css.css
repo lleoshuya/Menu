@@ -100,7 +100,7 @@ a {
     color: var(--fundo);
     padding: 1.5rem 1.5rem 2rem;
     transition: .5s;
-    z-index: var(--z-fixed);
+    z-index: var(--z-index);
 }
 
 
